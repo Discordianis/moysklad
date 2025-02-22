@@ -6,10 +6,12 @@ import { IUsers, IUsersInfo } from '../../interfaces/IUsers.tsx';
 import { ITodos } from '../../interfaces/ITodos.tsx';
 import { TableContainer, Table, TableHead, TableRow, TableCell, TableBody, Avatar, Typography, Paper } from '@mui/material';
 import './Table.css'
+import Loading from "../Loading/Loading.tsx";
 
 const UserTodoTable: React.FC = observer(() => {
     const [users, setUsers] = useState<IUsers | null>(null);
     const [todos, setTodos] = useState<ITodos | null>(null);
+    const [loading, setLoading] = useState<boolean>(true)
 
     useEffect(() => {
         const disposer = autorun(() => {
@@ -19,10 +21,20 @@ const UserTodoTable: React.FC = observer(() => {
         return () => disposer();
     }, []);
 
+    useEffect(() => {
+        if (users && todos) {
+            setLoading(false)
+        }
+    }, [users, todos]);
+
     const getTodoCount = (userId: number): number => {
         if (!todos) return 0;
         return Object.values(todos).filter(todo => todo.userId === userId).length;
     };
+
+    if (loading) {
+        return <Loading />
+    }
 
     return (
         <div className={'table_root'}>

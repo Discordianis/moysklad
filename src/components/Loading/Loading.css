@@ -1,3 +1,11 @@
-
+.loading_root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading_root img {
+  height: 250px;
+  width: 250px;
+}
 
 /*# sourceMappingURL=Loading.css.map */

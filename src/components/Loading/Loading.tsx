@@ -1,5 +1,6 @@
 import React from 'react';
 import loadingImg from '../../../public/loading.gif'
+import './Loading.css'
 
 const Loading: React.FC = () => {
     return (
