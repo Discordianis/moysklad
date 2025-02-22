@@ -1,3 +1,60 @@
+.table_root {
+  padding: 50px;
+}
+.table_root .table_user_index {
+  width: 20px;
+}
+.table_root .table_user_names {
+  margin-left: 10px;
+}
+.table_root .css-4zqzmc-MuiTypography-root {
+  font-family: "inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 45px;
+}
+.table_root .css-1fqfsif-MuiTypography-root {
+  font-family: "inter", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58.08px;
+}
+.table_root .css-1ifbb7e-MuiPaper-root-MuiTableContainer-root * {
+  font-family: "inter", sans-serif;
+}
+.table_root .table_content_row {
+  transition: background-color 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+.table_root .table_content_row:hover {
+  background-color: #3e464e;
+}
 
+.table_user_root > div {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    font-size: 12px;
+  }
+  .table_root {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .css-yduayu-MuiTableCell-root.table_todo_count {
+    text-align: center;
+  }
+  .table_root .css-1fqfsif-MuiTypography-root {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .table_root .css-4zqzmc-MuiTypography-root {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
 
 /*# sourceMappingURL=Table.css.map */
